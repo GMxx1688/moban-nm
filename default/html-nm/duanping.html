@@ -1,0 +1,39 @@
+<style id="dynamic-style"></style>
+<script>
+  function getStarRating(score) {
+    if (score >= 1.0 && score <= 2.0) return '★☆☆☆☆';
+    if (score >= 3.0 && score <= 4.0) return '★★☆☆☆';
+    if (score >= 5.0 && score <= 6.0) return '★★★☆☆';
+    if (score >= 7.0 && score <= 8.0) return '★★★★☆';
+    if (score >= 9.0 && score <= 10.0) return '★★★★★';
+    return '☆☆☆☆☆'; 
+      
+  }
+    
+
+  function setRating() {
+    const ratingaClass = "ratinga";
+
+    const styles = `
+      .${ratingaClass} {
+        color: #FFA500;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .${ratingaClass} {
+          font-size: 16px;
+        }
+      }
+    `;
+
+    document.getElementById("dynamic-style").innerHTML = styles;
+    document.getElementById("ratinga").className = ratingaClass;
+    document.getElementById("ratinga").innerHTML = `评分: ${getStarRating(parseFloat("{$obj.vod_score}"))}`;
+  }
+
+  window.onload = setRating;
+</script>
+<p>{:get_duanping($obj.vod_id)}</p>
+<div id="ratinga"></div>

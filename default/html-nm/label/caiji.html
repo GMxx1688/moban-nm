@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{include file="block/include"}
+	
+</head>
+<body>
+	
+    <div class="container">
+        <div class="row">
+        	{include file="block/head"}
+            <div class="stui-pannel clearfix">
+				<!-- 列表 -->			
+				<ul class="stui-vodlist clearfix">
+					{maccms:vod num="100" type="current" paging="yes" pageurl="label/cj" order="desc" by="id"}
+					{include file="block/vod_box"}
+					{/maccms:vod}	 
+				</ul>
+				<!-- end 列表 -->
+				
+				{include file="block/page"}<!-- 翻页-->		
+			</div>							
+        </div>
+    </div>
+	{include file="block/foot"}
+</body>
+</html>

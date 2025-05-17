@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{include file="block/include"}
+	{include file="seo/vod_search"}
+	<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+</head>
+<body>
+	
+    <div class="container">
+        <div class="row">       	
+        	{include file="block/head"}
+        	
+        	<div class="stui-pannel clearfix">
+				<div class="stui-pannel__head clearfix">	
+					<h3 class="title">									
+						与“<em>{$param.wd}{$param.actor}{$param.director}{$param.area}{$param.lang}{$param.year}{$param.class}</em>”相关的影片
+					</h3>
+				</div>	
+				
+				<!-- 列表 -->	
+				<ul class="stui-vodlist clearfix">
+				    										
+					{maccms:vod num="35" paging="yes" pageurl="vod/search" order="desc" by="time"}						
+					{include file="block/vod_box"}					
+					{/maccms:vod}
+				</ul>		
+				<!-- end 列表 -->	
+				
+				{include file="block/page"}<!-- 翻页-->	
+			</div>
+				
+        </div>
+    </div>
+	{include file="block/foot"}
+</body>
+</html>
