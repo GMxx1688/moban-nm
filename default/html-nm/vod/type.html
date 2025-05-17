@@ -6,13 +6,13 @@
 </head>
 <body>
 	
-    <div class="container">
-        <div class="row">
+    <div class="vvdelcbx">
+        <div class="lzyronyu">
         	{include file="block/head"}
-            <div class="stui-pannel clearfix">
+            <div class="prvvbktp xbhcwglg">
              <!-- 筛选 -->
-			    <div class="type-list-fl">
-		    		<ul class="clearfix">
+			    <div class="hrwuczmn">
+		    		<ul class="xbhcwglg">
 		    			<li {if condition="($obj.type_id eq MAC_TYPE_ID || $obj.type_id eq MAC_TYPE_PID)"}class="active"{/if}><a href="{:mac_url_type($obj)}">全部</a></li>
 
                         {maccms:type parent="current" order="asc" by="sort"}
@@ -24,7 +24,7 @@
 			 <!-- end 筛选 -->
 	
 				<!-- 列表 -->			
-				<ul class="stui-vodlist clearfix">
+				<ul class="stui-vodlist xbhcwglg">
 					{maccms:vod num="36" paging="yes" type="current" order="desc" by="sort"}
 					{include file="block/vod_box"}
 					{/maccms:vod}	 

@@ -6,27 +6,27 @@
 </head>
 <body>
 	
-    <div class="container">
-        <div class="row">
+    <div class="vvdelcbx">
+        <div class="lzyronyu">
         	{include file="block/head"}
         	
-            <div class="stui-pannel clearfix">
+            <div class="prvvbktp xbhcwglg">
 				<!-- 筛选 -->
-			<div class="list_type_title box">
-				<div class="sx-title">已选择</div>
-				<div class="sx-title2">{$obj.type_name}</div>
+			<div class="fuqkwews box">
+				<div class="jysouiyf">已选择</div>
+				<div class="preoxoja">{$obj.type_name}</div>
 				<ul class="sx-txt">
 					{notempty name="$param['class']"}<li>{$param['class']}</li>{/notempty}
 					{notempty name="$param['area']"}<li>{$param['area']}</li>{/notempty}
 					{notempty name="$param['year']"}<li>{$param['year']}</li>{/notempty}
 					{notempty name="$param['letter']"}<li>{$param['letter']}</li>{/notempty}
 				</ul>
-				<span class="sx-no"><a href="{:mac_url_type($obj,[],'show')}">重新筛选</a></span>
+				<span class="sddyavyv"><a href="{:mac_url_type($obj,[],'show')}">重新筛选</a></span>
 			</div>
-	        <div class="list_type_title box">
-				<ul class="stui-screen__list type-slide clearfix">
-					<li class="text">
-						<span class="text-muted">按类型</span>
+	        <div class="fuqkwews box">
+				<ul class="sgodohlx type-slide xbhcwglg">
+					<li class="bxenxldy">
+						<span class="tidyviuy">按类型</span>
 					</li>
 					<li {if condition="$param['class'] eq ''"} class="active"{/if}><a href="{:mac_url_type($obj,['area'=>$param['area'],'lang'=>$param['lang'],'year'=>$param['year'],'level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>'','order'=>$param['order'],'by'=>$param['by'] ],'show')}">全部</a></li>
 	                {empty name="$obj.type_extend.area"}
@@ -39,9 +39,9 @@
 	                {/maccms:foreach}
 	                {/empty}							
 				</ul>
-				<ul class="stui-screen__list type-slide clearfix">
-					<li class="text">
-						<span class="text-muted">按地区</span>
+				<ul class="sgodohlx type-slide xbhcwglg">
+					<li class="bxenxldy">
+						<span class="tidyviuy">按地区</span>
 					</li>
 					<li {if condition="$param['area'] eq ''"} class="active" {/if}><a href="{:mac_url_type($obj,['area'=>'','lang'=>$param['lang'],'year'=>$param['year'],'level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>$param['class'],'order'=>$param['order'],'by'=>$param['by'] ],'show')}">全部</a></li>
 	                {empty name="$obj.type_extend.area"}
@@ -54,9 +54,9 @@
 	                    {/maccms:foreach}
 	                {/empty}
 				</ul>
-				<ul class="stui-screen__list type-slide clearfix">
-					<li class="text">
-						<span class="text-muted">按年份</span>
+				<ul class="sgodohlx type-slide xbhcwglg">
+					<li class="bxenxldy">
+						<span class="tidyviuy">按年份</span>
 					</li>
 					<li {if condition="$param['year'] eq ''"} class="active"{/if}><a href="{:mac_url_type($obj,['area'=>$param['area'],'lang'=>$param['lang'],'year'=>'','level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>$param['class'],'order'=>$param['order'],'by'=>$param['by'] ],'show')}">全部</a></li>
 	                {empty name="$obj.type_extend.year"}
@@ -69,9 +69,9 @@
 	                    {/maccms:foreach}
 	                {/empty}							
 				</ul>
-				<ul class="stui-screen__list type-slide clearfix">
-					<li class="text">
-						<span class="text-muted">按排序</span>
+				<ul class="sgodohlx type-slide xbhcwglg">
+					<li class="bxenxldy">
+						<span class="tidyviuy">按排序</span>
 					</li>
 					<li {if condition="$param.by eq '' || $param.by eq 'time'"} class="active"{/if}><a href="{:mac_url_type($obj,['area'=>$param['area'],'lang'=>$param['lang'],'year'=>$param['year'],'level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>$param['class'],'order'=>$param['order'],'by'=>'time' ],'show')}">时间</a></li>
 			        <li {if condition="$param.by eq 'hits'"} class="active"{/if}><a href="{:mac_url_type($obj,['area'=>$param['area'],'lang'=>$param['lang'],'year'=>$param['year'],'level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>$param['class'],'order'=>$param['order'],'by'=>'hits' ],'show')}">人气</a></li>
@@ -81,7 +81,7 @@
 				<!-- end 筛选 -->
 				
 				<!-- 列表 -->
-				<ul class="stui-vodlist clearfix">
+				<ul class="stui-vodlist xbhcwglg">
 					{maccms:vod num="36" paging="yes" pageurl="vod/show" type="current" order="desc" by="time"}
 					{include file="block/vod_box"}
 					{/maccms:vod}	 

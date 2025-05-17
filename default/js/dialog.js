@@ -66,8 +66,8 @@
                 content.append(
                     contentBd = $('<div class="dialog-content-bd">'+ infoContent +'</div>')
                 );
-                dialogWrapper.addClass('dialog-wrap-info');
-                content.addClass('dialog-content-info');
+                dialogWrapper.addClass('dziexxyc');
+                content.addClass('asspzvli');
                 break;
 
             default :
@@ -75,7 +75,7 @@
         }
 
         setTimeout(function(){
-            dialogWrapper.addClass('dialog-wrap-show');
+            dialogWrapper.addClass('ndbjgscv');
             settings.onShow();
         }, 10);
 
@@ -137,7 +137,7 @@
     $.dialog.close = function(){
         settings.onBeforeClosed();
 
-        dialogWrapper.removeClass('dialog-wrap-show');
+        dialogWrapper.removeClass('ndbjgscv');
         setTimeout(function(){
             dialogWrapper.remove();
             settings.onClosed();
