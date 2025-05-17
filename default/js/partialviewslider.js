@@ -221,9 +221,9 @@ SOFTWARE.
 	    this.wrapper = el.closest('.partialViewSlider-wrapper');
 
 	    if(this.options.controlsPosition == 'outside'){
-	    	$(this.outerWrapper).addClass('partialViewSlider-outsideControls');
+	    	$(this.outerWrapper).addClass('jvstiqaj');
 	    } else if(this.options.controlsPosition == 'neighbors'){
-	    	$(this.outerWrapper).addClass('partialViewSlider-neighborControls');
+	    	$(this.outerWrapper).addClass('pcdojmgx');
 	    }
 
 	    var first_slide = el.find("li").slice(0,2),
@@ -234,7 +234,7 @@ SOFTWARE.
 		  calculateNumbers(this);
 
 	    if(this.options.perspective){
-	    	$(this.wrapper).addClass('partialViewSlider-perspective');
+	    	$(this.wrapper).addClass('lhtrzhyq');
 	    }
 
 	    if(this.options.controls){

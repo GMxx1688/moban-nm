@@ -1,0 +1,30 @@
+<div class="breadcrumb-container">
+    <div class="vvdelcbx xbhcwglg">
+        <div class="breadcrumb">
+            <a href="{$maccms.path}">首页</a>
+            {if condition="$obj.type_id gt 0"}
+                <span class="breadcrumb-separator">/</span>
+                <a href="{:mac_url_type($obj.type)}">
+                    {$obj.type.type_name}
+                </a>
+            {/if}
+            {if condition="$obj.type_1_id gt 0"}
+                <span class="breadcrumb-separator">/</span>
+                <a href="{:mac_url_type($obj.type_1)}">
+                    {$obj.type_1.type_name}
+                </a>
+            {/if}
+            {if condition="$obj.vod_id gt 0"}
+                <span class="breadcrumb-separator">/</span>
+                <a href="{:mac_url_vod_detail($obj)}">
+                    {$obj.vod_name}
+                </a>
+            {/if}
+            {if condition="$param.id eq 'play'"}
+                <span class="breadcrumb-separator">/</span>
+                <span>播放</span>
+            {/if}
+        </div>
+    </div>
+</div>
+
